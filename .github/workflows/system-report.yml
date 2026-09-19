@@ -1,0 +1,18 @@
+name: System Report
+
+on:
+  push:
+
+jobs:
+  system-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print OS and kernel
+        run: uname -a
+
+      - name: Check disk space
+        run: df -h
+
+      - name: Print date and time
+        run: date
